@@ -19,5 +19,4 @@ review.html
 feedback.json
 benchmark.json
 
-# Build artifact — attach to a GitHub Release instead of committing
-*.skill
+# NOTE: distributable artifacts in dist/ (vibecode-check.skill / .zip) ARE tracked on purpose.

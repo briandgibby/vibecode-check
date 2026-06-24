@@ -33,9 +33,17 @@ See [`examples/`](./examples) for full before/after transcripts.
 
 ## Install
 
-Pick whichever fits how you work.
+Skills are the same content everywhere — a `SKILL.md` and its resources. Each Claude surface just takes it in a slightly different wrapper, so grab the row that matches how you use Claude:
 
-### Option 1 — Claude Code plugin (one‑click)
+| If you use…                     | Install with                                   | File / path |
+| :------------------------------ | :--------------------------------------------- | :---------- |
+| **Claude Code** (CLI)           | the plugin marketplace, or drop in the folder  | plugin, or [`skills/vibecode-check/`](./skills/vibecode-check) |
+| **Claude desktop / Cowork**     | the one‑click **"Save skill"** button          | [`dist/vibecode-check.skill`](./dist/vibecode-check.skill) |
+| **Claude.ai** (web/desktop)     | upload under **Settings → Capabilities**       | [`dist/vibecode-check.zip`](./dist/vibecode-check.zip) |
+
+> `dist/vibecode-check.skill` and `dist/vibecode-check.zip` are the **same archive** with different extensions — Cowork looks for the `.skill` extension; claude.ai's uploader expects a `.zip`.
+
+### Claude Code — plugin (one‑click)
 
 ```text
 /plugin marketplace add your-username/vibecode-check
@@ -44,16 +52,17 @@ Pick whichever fits how you work.
 
 Then invoke it with `/vibecode-check` followed by your prompt — or just let it trigger automatically when a request is fuzzy.
 
-### Option 2 — drop‑in skill
+### Claude Code — drop‑in folder
 
-Copy the `skills/vibecode-check/` folder into either:
+Copy the `skills/vibecode-check/` folder into either `~/.claude/skills/` (every project) or `<your-project>/.claude/skills/` (shared with the repo).
 
-- `~/.claude/skills/` — available in every project, or
-- `<your-project>/.claude/skills/` — shared with the repo (loads after you trust the workspace).
+### Claude desktop / Cowork — `.skill`
 
-### Option 3 — `.skill` file (Cowork / Claude Code)
+Download [`dist/vibecode-check.skill`](./dist/vibecode-check.skill) and open it in the Claude desktop app, then click **Save skill**.
 
-Download `vibecode-check.skill` from the latest [Release](../../releases) and install it.
+### Claude.ai — `.zip` upload
+
+Download [`dist/vibecode-check.zip`](./dist/vibecode-check.zip), then in claude.ai go to **Settings → Capabilities** and add it under Skills. Requires a plan with code execution enabled (Pro, Max, Team, or Enterprise).
 
 ## Usage
 
@@ -79,6 +88,9 @@ vibecode-check/
 │   ├── SKILL.md                       # the skill itself
 │   └── references/
 │       └── prompting-principles.md    # principles it teaches, with citations
+├── dist/
+│   ├── vibecode-check.skill           # one-click install (Claude desktop / Cowork)
+│   └── vibecode-check.zip             # upload to claude.ai (same archive)
 ├── examples/                          # real before/after transcripts
 ├── .claude-plugin/
 │   ├── plugin.json                    # plugin manifest
@@ -87,9 +99,11 @@ vibecode-check/
 └── LICENSE
 ```
 
+> The `dist/` files are rebuilt from `skills/vibecode-check/`. If you change the skill, regenerate them so all three install paths stay in sync.
+
 ## How it was built
 
-Developed and validated with an eval harness: each test prompt was run **with and without** the skill, graded against explicit assertions, and reviewed across two iterations. Against a no‑skill baseline the lift was **+0.73** pass‑rate (100% vs ~27%); the v2 "understanding‑first" revision passes 24/24 assertions vs the prior version's 20/24. The test prompts and a fuller writeup live alongside the skill's development notes.
+Developed and validated with an eval harness: each test prompt was run **with and without** the skill, graded against explicit assertions, and reviewed across two iterations. Against a no‑skill baseline the lift was **+0.73** pass‑rate (100% vs ~27%); the v2 "understanding‑first" revision passes 24/24 assertions vs the prior version's 20/24.
 
 ## Credits & sources
 
