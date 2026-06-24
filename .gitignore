@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Skill-dev / eval scratch (don't ship these)
+*-workspace/
+iteration-*/
+review.html
+feedback.json
+benchmark.json
+
+# Build artifact — attach to a GitHub Release instead of committing
+*.skill

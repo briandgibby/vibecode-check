@@ -1,0 +1,17 @@
+{
+  "name": "gibby-skills",
+  "owner": {
+    "name": "Brian Gibby"
+  },
+  "plugins": [
+    {
+      "name": "vibecode-check",
+      "source": "./",
+      "description": "Clean up and de-ambiguate a prompt before it goes to a coding agent. Asks only the questions that matter, corrects non-standard terminology, and returns a portable prompt plus an 'are we still in sync?' list.",
+      "version": "2.0.0",
+      "license": "MIT",
+      "category": "prompt-engineering",
+      "keywords": ["prompt-engineering", "coding-agent", "disambiguation", "vibe-coding"]
+    }
+  ]
+}
