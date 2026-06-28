@@ -1,17 +1,17 @@
 ---
 name: vibecode-check
 description: >-
-  Clean up, de-ambiguate, and rewrite a prompt before it goes to a coding agent (Claude Code,
-  Cursor, etc.). Use whenever the user wants to sharpen, sanity-check, "vibecode-check", or
-  tighten a prompt they're about to send to an AI, or hands over a vague coding task an agent
-  would likely misinterpret. It catches the hidden ambiguities a coding agent would guess at —
-  including non-standard terms (e.g. "instruction set" for "system prompt") and implementation
-  words like "recursive" the user may not mean to mandate — resolves what matters via one-tap
-  questions with defaults or flagged assumptions, and returns a portable, copy-pasteable prompt
-  plus an always-on "are we still in sync?" list of assumptions. Trigger on "vibecode-check this",
-  "clean up my prompt", "is this prompt clear enough", "help me word this for Cursor/Claude Code",
-  "review my prompt before I send it", or any time the user is about to ask an AI to build, fix,
-  or refactor something and the request is fuzzy — even if they never say "prompt".
+  Use when the user wants to sharpen or rewrite a prompt for a coding agent such as Claude
+  Code, Cursor, Copilot, or v0. Finds load-bearing ambiguity, vocabulary drift, and accidental
+  implementation mandates; resolves them with one-tap questions or stated assumptions; returns
+  a portable prompt, sync-check list, and short teaching tip.
+version: 2.0.0
+author: Brian Gibby
+license: MIT
+metadata:
+  hermes:
+    tags: [prompt-engineering, coding-agent, disambiguation, vibe-coding, skill]
+    related_skills: []
 ---
 
 # Vibecode Check

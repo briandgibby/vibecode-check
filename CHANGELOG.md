@@ -4,6 +4,18 @@ All notable changes to this skill are documented here. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/); this project uses
 [semantic versioning](https://semver.org/).
 
+## [Unreleased]
+### Changed
+- Shortened and enriched `SKILL.md` frontmatter metadata for better validator headroom and discoverability.
+- Rebuilt distributable archives with a root-level `SKILL.md` layout and deterministic timestamps.
+
+### Added
+- Release helper scripts for deterministic dist builds and package validation.
+- Marketplace description for cleaner Claude Code plugin validation.
+
+### Fixed
+- Replaced placeholder GitHub URLs in plugin metadata and README install instructions.
+
 ## [2.0.0] - 2026-06-24
 ### Changed
 - Reframed from a "minimize questions" posture to **understanding-first**: surface

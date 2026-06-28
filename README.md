@@ -46,7 +46,7 @@ Skills are the same content everywhere — a `SKILL.md` and its resources. Each 
 ### Claude Code — plugin (one‑click)
 
 ```text
-/plugin marketplace add your-username/vibecode-check
+/plugin marketplace add briandgibby/vibecode-check
 /plugin install vibecode-check@gibby-skills
 ```
 
@@ -92,6 +92,9 @@ vibecode-check/
 │   ├── vibecode-check.skill           # one-click install (Claude desktop / Cowork)
 │   └── vibecode-check.zip             # upload to claude.ai (same archive)
 ├── examples/                          # real before/after transcripts
+├── scripts/
+│   ├── build_dist.py                   # rebuild deterministic .skill/.zip artifacts
+│   └── validate_release.py             # release/package validation checks
 ├── .claude-plugin/
 │   ├── plugin.json                    # plugin manifest
 │   └── marketplace.json               # marketplace listing (one-click install)
@@ -99,7 +102,7 @@ vibecode-check/
 └── LICENSE
 ```
 
-> The `dist/` files are rebuilt from `skills/vibecode-check/`. If you change the skill, regenerate them so all three install paths stay in sync.
+> The `dist/` files are rebuilt from `skills/vibecode-check/` with `python3 scripts/build_dist.py`. If you change the skill, regenerate them so all three install paths stay in sync, then run `python3 scripts/validate_release.py`.
 
 ## How it was built
 

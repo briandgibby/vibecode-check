@@ -5,10 +5,10 @@
   "description": "A pre-flight check for prompts headed to a coding agent. Finds the ambiguities an agent would guess at (including non-standard terminology and implementation words), asks only the load-bearing questions with defaults, and returns a portable rewritten prompt plus an always-on 'are we still in sync?' list.",
   "author": {
     "name": "Brian Gibby",
-    "url": "https://github.com/your-username"
+    "url": "https://github.com/briandgibby"
   },
-  "homepage": "https://github.com/your-username/vibecode-check",
-  "repository": "https://github.com/your-username/vibecode-check",
+  "homepage": "https://github.com/briandgibby/vibecode-check",
+  "repository": "https://github.com/briandgibby/vibecode-check",
   "license": "MIT",
   "keywords": ["prompt-engineering", "coding-agent", "vibe-coding", "disambiguation", "claude-code", "skill"]
 }

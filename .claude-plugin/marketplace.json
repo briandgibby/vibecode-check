@@ -1,5 +1,6 @@
 {
   "name": "gibby-skills",
+  "description": "Brian Gibby's Claude Code plugins and skills for prompt engineering and AI-assisted development workflows.",
   "owner": {
     "name": "Brian Gibby"
   },
